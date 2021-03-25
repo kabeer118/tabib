@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <link rel="stylesheet" href="res-bar.css">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<link rel="stylesheet" href="2nd.css">
+	<title></title>
+</head>
+<body>
+
+<nav>
+		<label class="logo">Tabbib</label>
+		<ul>
+			
+				<li><a class="Inacive" href="#">Home</a></li>
+				<li><a href="#">About us</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="index.html">LOGOUT</a></li>
+			
+		</ul>
+	</nav>
+   
+            
+            
+       <div class="wrapper">
+      <div class="search-input">
+        <a href="" target="_blank" hidden></a>
+        <input id="InputSearch" type="text" placeholder="Type to search..">
+        <div class="autocom-box">
+          <!-- here list are inserted from javascript -->
+        </div>
+        <div class="icon"><i class="fas fa-search"></i></div>
+      </div>
+    </div>
+
+  
+<div id="unfold" class="notfold">
+	<div id="product-name">
+
+		
+	</div>
+	<select name="quantity" class="qty">
+		<option>box</option>
+		<option>piece</option>
+	</select>
+
+	<button id="pbtn" class="pbtn">+</button>
+ <button id="qbtn" class="qbtn">qty</button>
+	 <button id="mbtn" class="mbtn">-</button>
+
+<div>
+	<button class="add-to-cart"><a href="inventory.html"> add to cart </a></button>
+</div>
+</div>
+
+<script type="text/javascript">
+
+		let btn = document.getElementById('qbtn')
+		let pbtn =document.getElementById('pbtn')
+		let mbtn =document.getElementById('mbtn')
+
+		btn.addEventListener('click',()=>{
+			btn.innerText=1;
+			pbtn.style.display='inline-block';
+			mbtn.style.display='inline-block';
+		}); 
+		mbtn.addEventListener('click',()=>{
+			btn.innerText=btn.innerText -1;
+			pbtn.style.display='inline-block';
+			mbtn.style.display='inline-block';
+		});
+		pbtn.addEventListener('click',()=>{
+			btn.innerText=parseInt(btn.innerText) +1;
+			pbtn.style.display='inline-block';
+			mbtn.style.display='inline-block';
+		});
+	</script>
+
+
+    <script src="suggestions.js"></script> 
+     <script src="res-bar.js"></script> 
+	
+</body>
+</html>
