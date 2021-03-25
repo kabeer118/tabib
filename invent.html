@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<style type="text/css">
+		.notfold{
+			background: white;
+  width: 150px;
+  height: 200px;
+  display: inline-block;
+  display: none;
+
+}
+.qty{
+	width: 150px;
+	height: 40px;
+	margin-bottom: 2px;
+
+}
+.add-to-cart{
+	width: 150px;
+	height: 80px;
+	padding: 20px;
+	margin: 10px;
+	align-items: center;
+	justify-content: center;
+}
+.unfold .btns{
+	border-color: red;
+	border-radius: 24px;
+	margin-bottom: 2px;
+}
+	</style>
+	<div class="unfold">
+	<select name="quantity" class="qty">
+		<option>box</option>
+		<option>piece</option>
+	</select>
+	<button id="pbtn" class="pbtn">+</button>
+	<button id="qbtn" class="qbtn">quantity</button>
+	<button id="mbtn" class="mbtn">-</button>
+	<button class="add-to-cart"><a href="inventory.html"> add to cart </a></button>
+</div>
+	<script type="text/javascript">
+
+		let btn = document.getElementById('qbtn')
+		let pbtn =document.getElementById('pbtn')
+		let mbtn =document.getElementById('mbtn')
+
+		btn.addEventListener('click',()=>{
+			btn.innerText=1;
+			pbtn.style.display='inline-block';
+			mbtn.style.display='inline-block';
+		}); 
+		mbtn.addEventListener('click',()=>{
+			btn.innerText=btn.innerText -1;
+			pbtn.style.display='inline-block';
+			mbtn.style.display='inline-block';
+		});
+		pbtn.addEventListener('click',()=>{
+			btn.innerText=parseInt(btn.innerText) +1;
+			pbtn.style.display='inline-block';
+			mbtn.style.display='inline-block';
+		});
+	</script>
+
+</body>
+</html>
